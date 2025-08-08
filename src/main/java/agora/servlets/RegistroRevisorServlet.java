@@ -31,17 +31,10 @@ public class RegistroRevisorServlet extends HttpServlet {
         UsuarioRevisor nuevoRevisor = new UsuarioRevisor(nombre, usuario);
         UsuarioRevisorDAO revisorDAO = new UsuarioRevisorDAO();
 
-        try {
-            int idGenerado = revisorDAO.registrarUsuarioRevisor(nuevoRevisor);
-
-            response.setContentType("text/html;charset=UTF-8");
-            response.getWriter().println("<h1>Revisor registrado con éxito!</h1>");
-            response.getWriter().println("<p>ID del revisor: " + idGenerado + "</p>");
-            response.getWriter().println("<a href='index.html'>Volver al formulario</a>");
-
-        } catch (SQLException e) {
-            response.getWriter().println("<h1>Error al registrar el revisor</h1>");
-            response.getWriter().println("<p>Hubo un problema con la base de datos: " + e.getMessage() + "</p>");
-        }
+        int idGenerado = revisorDAO.registrarUsuarioRevisor(nuevoRevisor);
+        response.setContentType("text/html;charset=UTF-8");
+        response.getWriter().println("<h1>Revisor registrado con éxito!</h1>");
+        response.getWriter().println("<p>ID del revisor: " + idGenerado + "</p>");
+        response.getWriter().println("<a href='index.html'>Volver al formulario</a>");
     }
 }

@@ -9,10 +9,14 @@ package agora.dao.modelo;
  * @author CAMILA
  */
 public class UsuarioRevisor {
+    // Atributos de la clase que representan los campos de la tabla
     private int idRevisor;
     private String nombreCompletoRevisor;
     private String usuarioAcceso;
+    
+    // --- Constructor y métodos Getter y Setter ---
 
+    // Constructor vacío (necesario para algunos frameworks)
     public UsuarioRevisor() {}
 
     public UsuarioRevisor(String nombreCompletoRevisor, String usuarioAcceso) {
