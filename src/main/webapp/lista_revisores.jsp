@@ -14,35 +14,34 @@
     </style>
 </head>
 <body>
-    <h2>Revisores Registrados</h2>
+    <h2>Usuarios Registrados</h2>
     <table border="1">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Nombre Completo</th>
                 <th>Usuario de Acceso</th>
+                <th>Tipo de Usuario</th>
             </tr>
         </thead>
         <tbody>
             <% 
-            // Se obtiene la lista de revisores que fue enviada por el Servlet
             List<UsuarioRevisor> listaRevisores = (List<UsuarioRevisor>) request.getAttribute("listaRevisores");
-            // Se verifica si la lista tiene datos
             if (listaRevisores != null && !listaRevisores.isEmpty()) {
-                // Se recorre la lista para crear una fila de la tabla por cada revisor
                 for (UsuarioRevisor revisor : listaRevisores) {
             %>
             <tr>
                 <td><%= revisor.getIdRevisor() %></td>
                 <td><%= revisor.getNombreCompletoRevisor() %></td>
                 <td><%= revisor.getUsuarioAcceso() %></td>
+                <td><%= revisor.getTipoUsuario() %></td>
             </tr>
             <%
                 }
             } else {
             %>
             <tr>
-                <td colspan="3">No hay revisores registrados.</td>
+                <td colspan="4">No hay revisores registrados.</td>
             </tr>
             <%
             }

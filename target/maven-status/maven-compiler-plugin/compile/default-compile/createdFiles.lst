@@ -1,7 +1,7 @@
 agora\dao\UsuarioRevisorDAO.class
 agora\dao\modelo\UsuarioRevisor.class
 com\mycompany\proyectowebservlets\JakartaRestConfiguration.class
-agora\servlets\RegistroRevisorServlet.class
 agora\dao\Conexion.class
 com\mycompany\proyectowebservlets\resources\JakartaEE11Resource.class
 agora\servlets\ListarRevisoresServlet.class
+agora\servlets\RegistrarRevisorServlet.class

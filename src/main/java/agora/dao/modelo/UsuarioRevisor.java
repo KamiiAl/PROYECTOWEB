@@ -13,23 +13,40 @@ public class UsuarioRevisor {
     private int idRevisor;
     private String nombreCompletoRevisor;
     private String usuarioAcceso;
+    private String tipoUsuario;
     
     // --- Constructor y métodos Getter y Setter ---
 
     // Constructor vacío (necesario para algunos frameworks)
-    public UsuarioRevisor() {}
-
-    public UsuarioRevisor(String nombreCompletoRevisor, String usuarioAcceso) {
-        this.nombreCompletoRevisor = nombreCompletoRevisor;
-        this.usuarioAcceso = usuarioAcceso;
+    public int getIdRevisor() {
+        return idRevisor;
     }
 
-    public int getIdRevisor() { return idRevisor; }
-    public void setIdRevisor(int idRevisor) { this.idRevisor = idRevisor; }
+    public void setIdRevisor(int idRevisor) {
+        this.idRevisor = idRevisor;
+    }
 
-    public String getNombreCompletoRevisor() { return nombreCompletoRevisor; }
-    public void setNombreCompletoRevisor(String nombreCompletoRevisor) { this.nombreCompletoRevisor = nombreCompletoRevisor; }
+    public String getNombreCompletoRevisor() {
+        return nombreCompletoRevisor;
+    }
 
-    public String getUsuarioAcceso() { return usuarioAcceso; }
-    public void setUsuarioAcceso(String usuarioAcceso) { this.usuarioAcceso = usuarioAcceso; }
+    public void setNombreCompletoRevisor(String nombreCompletoRevisor) {
+        this.nombreCompletoRevisor = nombreCompletoRevisor;
+    }
+
+    public String getUsuarioAcceso() {
+        return usuarioAcceso;
+    }
+
+    public void setUsuarioAcceso(String usuarioAcceso) {
+        this.usuarioAcceso = usuarioAcceso;
+    }
+    
+    public String getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(String tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
+    }
 }
